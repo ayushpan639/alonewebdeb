@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center;   
+    background-color:#272932;
+    font-family: garamond;
+    overflow: hidden;
+    color:  #D8A47F;
+    
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: slideTextTop 2s ease forwards;
+}
+
+.first {
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.second {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.searchbar {
+    width: 300px;
+    height: 80px;
+    background-color:#E7ECEF;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    opacity: 0;
+    margin-top: 20px;  
+    animation: slideBoxBottom 2s ease forwards;
+    animation-delay: 2s; 
+    border-radius: 20px;
+    font-weight: bolder;
+    color: #272932;
+}
+
+@keyframes slideTextTop {
+    from {
+        transform: translateY(0); 
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-270px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBoxBottom {
+    from {
+        transform: translateY(0);  
+        opacity: 0;
+        width:300px;
+    }
+    to {
+        transform: translateY(260px);
+        opacity: 1;
+        width: 98%;
+    }
+}
+.icon {
+    position: fixed; 
+    top: 0;            
+    left: 0;           
+    font-size: 35px;
+    margin: 10px;   
+    color: #E7ECEF;  
+}
+.history {
+    position: fixed; 
+    z-index: 1000;         
+    top: 10px;             
+    right: 10px; 
+    padding: 8px 12px;          
+    font-size: 14px;          
+    font-weight: bolder;
+    color: #272932;              
+    background-color: #E7ECEF;  
+    border: none;              
+    border-radius: 10px;       
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    transition: all 0.2s ease;  
+}
